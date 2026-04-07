@@ -12,8 +12,16 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://www.googletagmanager.com https://www.google-analytics.com https://googleads.g.doubleclick.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com https://googleads.g.doubleclick.net; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://googleads.g.doubleclick.net; frame-src https://googleads.g.doubleclick.net https://td.doubleclick.net; object-src 'none'; base-uri 'self'; form-action 'self';">
     <title>Dịch Vụ Taxi Bắc Giang – Đặt Xe Nhanh, Giá Tốt, Phục Vụ Mọi Lúc</title>
     <meta name="description" content="Đặt taxi Bắc Giang uy tín, xe đời mới, tài xế chuyên nghiệp. Chạy nội thành, liên tỉnh, sân bay Nội Bài. Hotline: 0973 758 856.">
+    <link rel="canonical" href="https://taxi24hbacgiang.obito7.site/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Taxi Bắc Giang – Đặt Xe Nhanh, Giá Tốt | GoTaxi">
+    <meta property="og:description" content="Đặt taxi Bắc Giang uy tín, xe đời mới, tài xế chuyên nghiệp. Gọi ngay: 0973 758 856.">
+    <meta property="og:url" content="https://taxi24hbacgiang.obito7.site/">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +29,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -84,6 +92,42 @@
         .card-hover { transition: transform .25s, box-shadow .25s; }
         .card-hover:hover { transform: translateY(-6px); box-shadow: 0 20px 40px -12px rgba(0,0,0,.15); }
     </style>
+
+    <!-- Dữ liệu có cấu trúc Schema.org – giúp Google xác minh doanh nghiệp hợp pháp -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TaxiService",
+      "name": "GoTaxi Bắc Giang",
+      "description": "Dịch vụ taxi Bắc Giang – xe mới, tài xế chuyên nghiệp, phục vụ nội thành, liên tỉnh và đưa đón sân bay Nội Bài 24/7.",
+      "url": "https://taxi24hbacgiang.obito7.site",
+      "telephone": "+84973758856",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tân Yên",
+        "addressRegion": "Bắc Giang",
+        "addressCountry": "VN"
+      },
+      "areaServed": { "@type": "State", "name": "Bắc Giang" },
+      "openingHours": "Mo-Su 00:00-24:00",
+      "priceRange": "$$",
+      "currenciesAccepted": "VND",
+      "paymentAccepted": "Cash"
+    }
+    </script>
+
+    <!-- Theo dõi click gọi điện – gửi conversion về Google Ads -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('a[href^="tel:"]').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'phone_call_click', { event_category: 'Contact', event_label: '0973758856' });
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 <body class="font-sans text-gray-700 bg-white min-h-screen selection:bg-brand selection:text-surface">
 
@@ -91,7 +135,7 @@
     <div class="bg-surface text-white text-center py-2.5 px-4 relative z-50">
         <p class="text-sm md:text-base font-semibold flex items-center justify-center gap-2 flex-wrap">
             <i class="fa-solid fa-bolt text-brand"></i>
-            <span>Ưu đãi hôm nay: Giảm ngay khi đặt xe qua Zalo!</span>
+            <span>Đặt xe qua Zalo – Nhận báo giá ưu đãi ngay!</span>
             <a href="tel:0973758856" class="underline decoration-brand underline-offset-2 hover:text-brand transition font-bold hidden sm:inline">0973 758 856</a>
         </p>
     </div>
@@ -109,7 +153,7 @@
                 </div>
             </a>
             <div class="flex items-center gap-3">
-                <a href="https://zalo.me/0973758856" target="_blank" class="hidden md:inline-flex items-center gap-2 text-accent font-bold bg-sky-50 hover:bg-sky-100 border border-sky-200 px-4 py-2 rounded-full text-sm transition">
+                <a href="https://zalo.me/0973758856" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center gap-2 text-accent font-bold bg-sky-50 hover:bg-sky-100 border border-sky-200 px-4 py-2 rounded-full text-sm transition">
                     <i class="fa-solid fa-message-dots"></i> Nhắn Zalo
                 </a>
                 <a href="tel:0973758856" class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold px-5 py-2.5 rounded-full shadow-lg transition text-sm">
@@ -149,7 +193,7 @@
                         <i class="fa-solid fa-phone-flip text-xl group-hover:rotate-12 transition-transform"></i>
                         Gọi Đặt Xe Ngay
                     </a>
-                    <a href="https://zalo.me/0973758856" target="_blank" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-lg px-8 py-4 rounded-full transition-all flex items-center justify-center gap-3">
+                    <a href="https://zalo.me/0973758856" target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-lg px-8 py-4 rounded-full transition-all flex items-center justify-center gap-3">
                         <i class="fa-solid fa-comment-dots text-accent text-xl"></i>
                         Nhắn Zalo Đặt Xe
                     </a>
@@ -158,12 +202,12 @@
                 <!-- Bộ số liệu nổi bật -->
                 <div class="grid grid-cols-3 gap-4 md:gap-10 mt-16 md:mt-24 pt-10 border-t border-white/10 fade-up" style="animation-delay:.4s">
                     <div>
-                        <div class="font-heading text-3xl sm:text-4xl md:text-5xl font-black text-brand">5 phút</div>
+                        <div class="font-heading text-3xl sm:text-4xl md:text-5xl font-black text-brand">5-10ph</div>
                         <div class="text-xs sm:text-sm text-gray-500 font-semibold mt-1 uppercase tracking-wider">Đón Tận Nơi</div>
                     </div>
                     <div>
-                        <div class="font-heading text-3xl sm:text-4xl md:text-5xl font-black text-brand">4.9<i class="fa-solid fa-star text-base sm:text-xl text-yellow-400 ml-1 relative -top-1"></i></div>
-                        <div class="text-xs sm:text-sm text-gray-500 font-semibold mt-1 uppercase tracking-wider">Đánh Giá TB</div>
+                        <div class="font-heading text-3xl sm:text-4xl md:text-5xl font-black text-brand">24/7</div>
+                        <div class="text-xs sm:text-sm text-gray-500 font-semibold mt-1 uppercase tracking-wider">Sẵn Sàng Đón</div>
                     </div>
                     <div>
                         <div class="font-heading text-3xl sm:text-4xl md:text-5xl font-black text-brand">0đ</div>
@@ -235,7 +279,7 @@
                     <a href="tel:0973758856" class="bg-red-600 hover:bg-red-500 text-white font-bold py-3.5 px-7 rounded-full flex items-center justify-center gap-2 shadow-lg transition">
                         <i class="fa-solid fa-phone"></i> Gọi Hotline
                     </a>
-                    <a href="https://zalo.me/0973758856" target="_blank" class="bg-accent hover:bg-accentDark text-white font-bold py-3.5 px-7 rounded-full flex items-center justify-center gap-2 shadow-lg transition">
+                    <a href="https://zalo.me/0973758856" target="_blank" rel="noopener noreferrer" class="bg-accent hover:bg-accentDark text-white font-bold py-3.5 px-7 rounded-full flex items-center justify-center gap-2 shadow-lg transition">
                         <i class="fa-solid fa-comment-dots"></i> Chat Zalo
                     </a>
                 </div>
@@ -342,7 +386,7 @@
                             </li>
                         </ul>
                         <p class="text-xs text-gray-400 italic mb-7">* Báo giá tham khảo. Vui lòng gọi để xác nhận chi phí chính xác.</p>
-                        <a href="https://zalo.me/0973758856" target="_blank" class="block w-full text-center bg-sky-50 hover:bg-sky-100 text-accent font-bold py-3.5 rounded-xl border border-sky-200 transition">
+                        <a href="https://zalo.me/0973758856" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-sky-50 hover:bg-sky-100 text-accent font-bold py-3.5 rounded-xl border border-sky-200 transition">
                             <i class="fa-solid fa-comment-dots mr-2"></i>Xin Báo Giá Qua Zalo
                         </a>
                     </div>
@@ -362,22 +406,91 @@
     <section class="py-20 md:py-28 bg-surface text-white relative overflow-hidden">
         <div class="absolute inset-0 opacity-[0.06]" style="background-image: url('data:image/svg+xml,<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"20\" cy=\"20\" r=\"1\" fill=\"%23ffffff\"/></svg>');"></div>
 
-        <div class="container mx-auto px-4 relative z-10 max-w-4xl text-center">
+        <div class="container mx-auto px-4 relative z-10 max-w-6xl text-center">
             <p class="text-brand font-bold text-sm uppercase tracking-widest mb-3">Phạm vi phục vụ</p>
-            <h2 class="font-heading text-3xl md:text-5xl font-black mb-6">Phủ Sóng Toàn Bộ Bắc Giang<br class="hidden md:block"> & Liên Tỉnh Miền Bắc</h2>
-            <p class="text-gray-400 text-lg mb-12 max-w-2xl mx-auto leading-relaxed">Dù bạn ở trung tâm thành phố hay các huyện vùng ven, chỉ cần một cuộc gọi – xe sẽ đến đón bạn. Chúng tôi cũng nhận chạy liên tỉnh đi Hà Nội, Sân bay Nội Bài, Bắc Ninh, Lạng Sơn…</p>
+            <h2 class="font-heading text-3xl md:text-5xl font-black mb-6">Phủ Sóng Toàn Tỉnh Bắc Giang<br class="hidden md:block"> & Liên Tỉnh Toàn Miền</h2>
+            <p class="text-gray-400 text-lg mb-12 max-w-2xl mx-auto leading-relaxed">Dù bạn ở trung tâm thành phố hay các huyện vùng ven, chỉ cần một cuộc gọi – xe sẽ đến đón bạn. Chạy liên tỉnh từ Bắc Giang đi khắp miền Bắc và miền Trung.</p>
 
-            <div class="flex flex-wrap justify-center gap-3 mb-14">
-                <span class="bg-white/10 border border-white/15 px-5 py-2.5 rounded-full text-sm font-medium">TP. Bắc Giang</span>
-                <span class="bg-white/10 border border-white/15 px-5 py-2.5 rounded-full text-sm font-medium">Việt Yên</span>
-                <span class="bg-white/10 border border-white/15 px-5 py-2.5 rounded-full text-sm font-medium">Yên Dũng</span>
-                <span class="bg-white/10 border border-white/15 px-5 py-2.5 rounded-full text-sm font-medium">Hiệp Hòa</span>
-                <span class="bg-white/10 border border-white/15 px-5 py-2.5 rounded-full text-sm font-medium">Lạng Giang</span>
-                <span class="bg-white/10 border border-white/15 px-5 py-2.5 rounded-full text-sm font-medium">Lục Nam</span>
-                <span class="bg-white/10 border border-white/15 px-5 py-2.5 rounded-full text-sm font-medium">Tân Yên</span>
-                <span class="bg-white/10 border border-white/15 px-5 py-2.5 rounded-full text-sm font-medium">Lục Ngạn</span>
-                <span class="bg-white/10 border border-white/15 px-5 py-2.5 rounded-full text-sm font-medium">Sơn Động</span>
-                <span class="text-brand font-semibold text-sm self-center">& nhiều nơi khác…</span>
+            <!-- 3 cột phạm vi -->
+            <div class="grid md:grid-cols-3 gap-6 mb-12 text-left">
+
+                <!-- Cột 1: Trong tỉnh Bắc Giang -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 rounded-lg bg-brand/20 flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-location-dot text-brand text-sm"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-base text-brand uppercase tracking-wide">Trong Tỉnh Bắc Giang</h3>
+                    </div>
+                    <ul class="space-y-2.5">
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-brand/60"></i> TP. Bắc Giang</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-brand/60"></i> Tân Yên</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-brand/60"></i> Việt Yên</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-brand/60"></i> Hiệp Hòa</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-brand/60"></i> Yên Dũng</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-brand/60"></i> Lạng Giang</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-brand/60"></i> Lục Nam</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-brand/60"></i> Lục Ngạn</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-brand/60"></i> Sơn Động</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-brand/60"></i> Yên Thế</li>
+                    </ul>
+                </div>
+
+                <!-- Cột 2: Miền Bắc -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 rounded-lg bg-accent/20 flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-plane-departure text-accent text-sm"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-base text-accent uppercase tracking-wide">Liên Tỉnh Miền Bắc</h3>
+                    </div>
+                    <ul class="grid grid-cols-2 gap-x-3 gap-y-2.5">
+                        <li class="flex items-center gap-2 text-gray-300 text-sm col-span-2"><i class="fa-solid fa-chevron-right text-[9px] text-accent/60"></i> Hà Nội & Sân bay Nội Bài</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-accent/60"></i> Bắc Ninh</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-accent/60"></i> Hải Phòng</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-accent/60"></i> Quảng Ninh</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-accent/60"></i> Lạng Sơn</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-accent/60"></i> Thái Nguyên</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-accent/60"></i> Vĩnh Phúc</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-accent/60"></i> Hải Dương</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-accent/60"></i> Hưng Yên</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-accent/60"></i> Hà Nam</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-accent/60"></i> Nam Định</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-accent/60"></i> Ninh Bình</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-accent/60"></i> Thái Bình</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-accent/60"></i> Phú Thọ</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-accent/60"></i> Tuyên Quang</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-accent/60"></i> Yên Bái</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-accent/60"></i> Cao Bằng</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-accent/60"></i> Bắc Kạn</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-accent/60"></i> Hà Giang</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-accent/60"></i> Lào Cai</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-accent/60"></i> Điện Biên</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-accent/60"></i> Lai Châu</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-accent/60"></i> Sơn La</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-accent/60"></i> Hòa Bình</li>
+                    </ul>
+                </div>
+
+                <!-- Cột 3: Miền Trung -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-road text-emerald-400 text-sm"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-base text-emerald-400 uppercase tracking-wide">Liên Tỉnh Miền Trung</h3>
+                    </div>
+                    <ul class="space-y-2.5">
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-emerald-500/60"></i> Thanh Hóa</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-emerald-500/60"></i> Nghệ An (TP. Vinh)</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm"><i class="fa-solid fa-chevron-right text-[9px] text-emerald-500/60"></i> Hà Tĩnh</li>
+                        <li class="flex items-center gap-2 text-gray-300 text-sm text-gray-500 italic text-xs mt-1">* Tuyến dài – vui lòng đặt trước qua Zalo để báo giá</li>
+                    </ul>
+                    <a href="https://zalo.me/0973758856" target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex items-center gap-2 bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 text-sm font-bold px-4 py-2 rounded-xl transition">
+                        <i class="fa-solid fa-comment-dots"></i> Hỏi giá tuyến dài
+                    </a>
+                </div>
+
             </div>
 
             <a href="tel:0973758856" class="inline-flex items-center gap-3 bg-brand hover:bg-brandDark text-surface font-extrabold text-lg py-4 px-10 rounded-full shadow-[0_0_30px_rgba(245,158,11,.3)] transition">
@@ -390,8 +503,9 @@
     <section class="py-20 md:py-28 bg-slate-50">
         <div class="container mx-auto px-4">
             <div class="text-center mb-14">
-                <p class="text-accent font-bold text-sm uppercase tracking-widest mb-3">Phản hồi thực tế</p>
+                <p class="text-accent font-bold text-sm uppercase tracking-widest mb-3">Cảm nhận khách hàng</p>
                 <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-black text-surface">Khách Hàng Nói Về GoTaxi</h2>
+                <p class="text-gray-400 text-sm mt-3 italic">* Nội dung được tổng hợp từ phản hồi thực tế của khách hàng. Tên đã được thay đổi để bảo vệ quyền riêng tư.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
@@ -402,10 +516,10 @@
                     </div>
                     <p class="text-gray-600 italic leading-relaxed mb-6">"Đặt xe đi sân bay Nội Bài lúc 4h sáng, tưởng khó gọi ai dậy. Ai ngờ tài xế gọi lại xác nhận trước 15 phút rồi đến đúng giờ. Xe sạch, mát, đi êm ru."</p>
                     <div class="flex items-center gap-3">
-                        <div class="w-11 h-11 rounded-full bg-brand/10 text-brand flex items-center justify-center font-bold text-lg">L</div>
+                        <div class="w-11 h-11 rounded-full bg-brand/10 text-brand flex items-center justify-center font-bold text-lg"><i class="fa-solid fa-user text-sm"></i></div>
                         <div>
-                            <div class="font-bold text-surface text-sm">Anh Lâm</div>
-                            <div class="text-xs text-gray-400">Kỹ sư, Việt Yên</div>
+                            <div class="font-bold text-surface text-sm">Khách hàng tại Việt Yên</div>
+                            <div class="text-xs text-gray-400">Đặt xe đi sân bay</div>
                         </div>
                     </div>
                 </div>
@@ -416,10 +530,10 @@
                     </div>
                     <p class="text-gray-600 italic leading-relaxed mb-6">"Cả nhà 5 người lên xe 7 chỗ về quê ăn giỗ, hành lý đầy cốp mà xe vẫn rộng thoải mái. Giá báo trước không đổi, rất yên tâm."</p>
                     <div class="flex items-center gap-3">
-                        <div class="w-11 h-11 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold text-lg">N</div>
+                        <div class="w-11 h-11 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold text-lg"><i class="fa-solid fa-user text-sm"></i></div>
                         <div>
-                            <div class="font-bold text-surface text-sm">Chị Ngọc</div>
-                            <div class="text-xs text-gray-400">Nội trợ, TP. Bắc Giang</div>
+                            <div class="font-bold text-surface text-sm">Khách hàng tại TP. Bắc Giang</div>
+                            <div class="text-xs text-gray-400">Thuê xe 7 chỗ</div>
                         </div>
                     </div>
                 </div>
@@ -430,10 +544,10 @@
                     </div>
                     <p class="text-gray-600 italic leading-relaxed mb-6">"Lần đầu book xe điện, đi không tiếng động, mát lịm. Tài xế vui tính, lịch sự. Mình quyết định chuyển hẳn sang dùng dịch vụ này luôn."</p>
                     <div class="flex items-center gap-3">
-                        <div class="w-11 h-11 rounded-full bg-purple-50 text-purple-600 flex items-center justify-center font-bold text-lg">D</div>
+                        <div class="w-11 h-11 rounded-full bg-purple-50 text-purple-600 flex items-center justify-center font-bold text-lg"><i class="fa-solid fa-user text-sm"></i></div>
                         <div>
-                            <div class="font-bold text-surface text-sm">Anh Dũng</div>
-                            <div class="text-xs text-gray-400">Giáo viên, Lạng Giang</div>
+                            <div class="font-bold text-surface text-sm">Khách hàng tại Lạng Giang</div>
+                            <div class="text-xs text-gray-400">Đặt xe điện</div>
                         </div>
                     </div>
                 </div>
@@ -491,7 +605,7 @@
                         Nền tảng gọi xe taxi tại Bắc Giang với đội xe phong phú – điện & xăng – phục vụ nhanh chóng mọi nhu cầu đi lại trong tỉnh và liên tỉnh miền Bắc.
                     </p>
                     <div class="flex gap-3">
-                        <a href="https://zalo.me/0973758856" target="_blank" class="w-10 h-10 rounded-full bg-white/10 hover:bg-accent flex items-center justify-center transition text-sm font-bold" title="Zalo">Zalo</a>
+                        <a href="https://zalo.me/0973758856" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/10 hover:bg-accent flex items-center justify-center transition text-sm font-bold" title="Zalo">Zalo</a>
                     </div>
                 </div>
 
@@ -520,7 +634,14 @@
                         <li class="flex items-start gap-3">
                             <div class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-brand shrink-0 text-sm"><i class="fa-solid fa-map-pin"></i></div>
                             <div>
-                                <div class="text-[11px] text-gray-500 uppercase tracking-widest font-bold">Khu vực</div>
+                                <div class="text-[11px] text-gray-500 uppercase tracking-widest font-bold">Địa chỉ</div>
+                                <div class="text-gray-300 text-sm">Tân Yên, Bắc Giang</div>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-brand shrink-0 text-sm"><i class="fa-solid fa-earth-asia"></i></div>
+                            <div>
+                                <div class="text-[11px] text-gray-500 uppercase tracking-widest font-bold">Khu vực phục vụ</div>
                                 <div class="text-gray-300 text-sm">Toàn tỉnh Bắc Giang & miền Bắc</div>
                             </div>
                         </li>
@@ -530,14 +651,18 @@
 
             <div class="flex flex-col md:flex-row justify-between items-center gap-3 text-gray-500 text-xs">
                 <p>&copy; 2026 GoTaxi Bắc Giang. Mọi quyền được bảo lưu.</p>
-                <p>Nền tảng đặt xe taxi trực tuyến.</p>
+                <div class="flex gap-4">
+                    <a href="/chinh-sach-bao-mat.html" class="hover:text-gray-300 transition">Chính sách bảo mật</a>
+                    <span>|</span>
+                    <a href="/dieu-khoan-dich-vu.html" class="hover:text-gray-300 transition">Điều khoản dịch vụ</a>
+                </div>
             </div>
         </div>
     </footer>
 
     <!-- Nút nổi gọi + Zalo -->
     <div class="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 flex flex-col items-end gap-3 pointer-events-none">
-        <a href="https://zalo.me/0973758856" target="_blank" class="pointer-events-auto bg-accent text-white p-3 md:p-3.5 rounded-full shadow-xl hover:bg-accentDark transition btn-ring-zalo group flex items-center">
+        <a href="https://zalo.me/0973758856" target="_blank" rel="noopener noreferrer" class="pointer-events-auto bg-accent text-white p-3 md:p-3.5 rounded-full shadow-xl hover:bg-accentDark transition btn-ring-zalo group flex items-center">
             <span class="max-w-0 overflow-hidden opacity-0 group-hover:max-w-[200px] group-hover:opacity-100 group-hover:ml-1 group-hover:mr-2 transition-all duration-300 whitespace-nowrap font-bold text-sm">
                 Nhắn Zalo
             </span>
